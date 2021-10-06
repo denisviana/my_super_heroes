@@ -1,10 +1,8 @@
 class Environment {
   Environment._();
 
-  static const baseUrlDev = '';
-  static const baseWebSocketUrlDev = '';
-  static const imageUrlDev = '';
-  static const baseUrlProd = '';
-  static const baseWebSocketUrlProd = '';
-  static const imageUrlProd = '';
+  static const baseUrlDev = 'https://superheroapi.com/api/';
+  static const devAccessToken = '6113305212075088';
+  static const baseUrlProd = 'https://superheroapi.com/api/';
+  static const prodAccessToken = '6113305212075088';
 }

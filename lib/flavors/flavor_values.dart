@@ -5,13 +5,10 @@ import 'package:radio_life/app/utils/string_utils.dart';
 enum Flavor { DEV, PRODUCTION }
 
 class FlavorValues {
-  FlavorValues(
-      {required this.baseUrl,
-      required this.baseWebSocketUrl,
-      required this.imageUrl});
+  FlavorValues({required this.baseUrl, required this.accessToken});
+
   final String baseUrl;
-  final String baseWebSocketUrl;
-  final String imageUrl;
+  final String accessToken;
 }
 
 class FlavorConfig {
@@ -45,5 +42,6 @@ class FlavorConfig {
   static FlavorConfig get instance => _instance;
 
   static bool isProduction() => _instance.flavor == Flavor.PRODUCTION;
+
   static bool isDevelopment() => _instance.flavor == Flavor.DEV;
 }

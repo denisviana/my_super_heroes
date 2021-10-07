@@ -33,7 +33,7 @@ class Resource<T> {
 
   static Resource<T> success<T>({T? data}) => Resource<T>(data: data, status: Status.success);
 
-  static FutureOr<Resource<T>> asFuture<T>(FutureOr<T> Function() req) async {
+  static Future<Resource<T>> asFuture<T>(FutureOr<T> Function() req) async {
     try {
       final res = await req();
       return success<T>(data: res);

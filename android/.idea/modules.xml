@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1871575904/android.flutter_secure_storage.iml" filepath="$PROJECT_DIR$/.idea/modules/-1871575904/android.flutter_secure_storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/10956590/android.package_info.iml" filepath="$PROJECT_DIR$/.idea/modules/10956590/android.package_info.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1722639545/android.path_provider.iml" filepath="$PROJECT_DIR$/.idea/modules/1722639545/android.path_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1407469008/android.share.iml" filepath="$PROJECT_DIR$/.idea/modules/1407469008/android.share.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1441993995/android.shared_preferences.iml" filepath="$PROJECT_DIR$/.idea/modules/1441993995/android.shared_preferences.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1152123188/android.sqflite.iml" filepath="$PROJECT_DIR$/.idea/modules/-1152123188/android.sqflite.iml" />
+    </modules>
+  </component>
+</project>

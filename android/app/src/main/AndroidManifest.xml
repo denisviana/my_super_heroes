@@ -1,7 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sisnet.radio_life">
-   <application
-        android:label="radio_life"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:label="myapp"
+        tools:overrideLibrary="com.it_nomads.fluttersecurestorage"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

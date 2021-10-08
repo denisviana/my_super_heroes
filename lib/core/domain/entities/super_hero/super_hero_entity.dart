@@ -1,10 +1,10 @@
 import 'package:meta/meta.dart';
-import 'package:radio_life/core/domain/entities/super_hero/appearance_entity.dart';
-import 'package:radio_life/core/domain/entities/super_hero/biografy_entity.dart';
-import 'package:radio_life/core/domain/entities/super_hero/connections_entity.dart';
-import 'package:radio_life/core/domain/entities/super_hero/image_entity.dart';
-import 'package:radio_life/core/domain/entities/super_hero/power_stats_entity.dart';
-import 'package:radio_life/core/domain/entities/super_hero/work_entity.dart';
+import 'package:my_app/core/domain/entities/super_hero/appearance_entity.dart';
+import 'package:my_app/core/domain/entities/super_hero/biografy_entity.dart';
+import 'package:my_app/core/domain/entities/super_hero/connections_entity.dart';
+import 'package:my_app/core/domain/entities/super_hero/image_entity.dart';
+import 'package:my_app/core/domain/entities/super_hero/power_stats_entity.dart';
+import 'package:my_app/core/domain/entities/super_hero/work_entity.dart';
 
 @immutable
 class SuperHeroEntity {

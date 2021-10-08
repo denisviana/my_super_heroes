@@ -30,9 +30,9 @@ class ErrorMapper {
       case DioErrorType.sendTimeout:
       case DioErrorType.connectTimeout:
       case DioErrorType.receiveTimeout:
-        return '';
+        return 'Time out';
       case DioErrorType.cancel:
-        return '';
+        return 'Request canceled';
       case DioErrorType.response:
       default:
         break;
@@ -41,19 +41,19 @@ class ErrorMapper {
       final Map<String, dynamic> data = error.response?.data is Map ? error.response?.data : null;
       switch (error.response?.statusCode) {
         case 400:
-          return '';
+          return 'Bad request';
         case 401:
-          return '';
+          return 'Not authorized';
         case 403:
-          return '';
+          return 'Not authorized';
         case 404:
-          return '';
+          return 'Not found';
         case 500:
         case 501:
         case 502:
-          return '';
+          return 'Internal error';
         case 503:
-          return '';
+          return 'Unexpected error';
         default:
           break;
       }
@@ -61,6 +61,6 @@ class ErrorMapper {
         return data['message'] ?? '';
       }
     }
-    return '';
+    return 'Unexpected error';
   }
 }

@@ -1,8 +1,9 @@
 import 'package:injectable/injectable.dart';
-import 'package:radio_life/core/data/data_sources/super_heroes/remote/super_heroes_remote_data_source.dart';
-import 'package:radio_life/core/data/model/resource.dart';
-import 'package:radio_life/core/domain/entities/super_hero/super_hero_entity.dart';
-import 'package:radio_life/core/domain/repositories/super_heroes/super_heroes_repository.dart';
+import 'package:my_app/core/adapter/super_heroes/super_heroes_adapter.dart';
+import 'package:my_app/core/data/data_sources/super_heroes/remote/super_heroes_remote_data_source.dart';
+import 'package:my_app/core/data/model/resource.dart';
+import 'package:my_app/core/domain/entities/super_hero/super_hero_entity.dart';
+import 'package:my_app/core/domain/repositories/super_heroes/super_heroes_repository.dart';
 
 @Injectable(as: SuperHeroesRepository)
 class SuperHeroesRepositoryImpl extends SuperHeroesRepository {
@@ -14,9 +15,10 @@ class SuperHeroesRepositoryImpl extends SuperHeroesRepository {
   Future<Resource<List<SuperHeroEntity>>> searchSuperHeroesByName({
     required String name,
   }) =>
-      Resource.asFuture(() async {
-        final response =
-            await _remoteDataSource.searchSuperHeroByName(name: name);
-        return <SuperHeroEntity>[];
-      });
+      Resource.asFuture(
+        () => _remoteDataSource.searchSuperHeroByName(name: name),
+        (data) => SuperHeroesResponseAdapter.fromJsonList(
+          List<Map<String, dynamic>>.from(data['results'] ?? []),
+        ),
+      );
 }
